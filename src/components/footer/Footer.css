@@ -1,0 +1,121 @@
+.bottom-menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background: #d5d5d5;
+    border-radius: 25px 25px 0 0;
+    z-index: 101;
+}
+
+.bottom-menu ul{
+    display: flex;
+}
+
+.bottom-menu ul li {
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+.bottom-menu ul li a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+}
+
+.bottom-menu ul li a .bottom-list-icon{
+    position: relative;
+    display: block;
+    line-height: 70px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+
+.bottom-menu ul li.active a .bottom-list-icon{
+    transform: translateY(-26px);
+}
+
+.bottom-menu ul li a .bottom-list-icon .MuiSvgIcon-root{
+    font-size: 30x  px;
+    color: #373848
+}
+
+.bottom-menu ul li.active a .bottom-list-icon .MuiSvgIcon-root{
+    transition: 0.5s;
+    color: #faf9fb;
+}
+
+.indicator{
+    background: #f8901c;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    border-radius: 100vw;
+    top: -50%;
+    left: 5%;
+    border: 6px solid #faf9fb;
+    transition: 0.5s;
+}
+
+.indicator::before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -20px;
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border-top-right-radius: 18px;
+    box-shadow: 0px -10px 0 0 #faf9fb;
+}
+
+.indicator::after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: -20px;
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border-top-left-radius: 18px;
+    box-shadow: 0px -10px 0 0 #faf9fb;    
+}
+
+
+
+.bottom-menu ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(60px * 0));
+}
+
+.bottom-menu ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(60px * 1));
+}
+
+.bottom-menu ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(60px * 2));
+}
+
+.bottom-menu ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(60px * 3));
+}
+
+.bottom-menu ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(60px * 4));
+}
+
+.bottom-menu ul li:nth-child(6).active ~ .indicator{
+    transform: translateX(calc(60px * 5));
+}

@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
+
+import Header from './components/header/Header';
+import MainBody from './components/main-body/MainBody';
+import Footer from './components/footer/Footer';
+
 import './App.css';
 
 function App() {
+
+  useEffect(() => {
+
+    const menuLi = document.querySelectorAll(".menu li");
+
+    function setMenuActive(){
+      menuLi.forEach(element => {
+        element.classList.remove('active');
+      });
+      
+      this.classList.add('active');
+    }
+
+    menuLi.forEach((element) => element.addEventListener('click', setMenuActive) );
+  
+  }, []);
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      
+      <MainBody />
+
+      <Footer />
+
     </div>
   );
 }

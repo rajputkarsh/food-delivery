@@ -1,0 +1,123 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    height: 60px;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo{
+    min-width: 40px;
+    width: 50px;
+}
+
+.header-input-box{
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 8px 15px;
+    width: 120px;
+}
+
+.header-input-box .search-icon{
+    color: #787a84;
+    font-size: 20px;
+}
+
+.header-input-box input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #787a84;
+    padding-left: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.shopping-cart{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.shopping-cart .cart{
+    font-size: 30px;
+    color: #373848;
+}
+
+.shopping-cart .cart-content{
+    width: 20px;
+    height: 20px;
+    background: #f8901c;
+    border-radius: 100%;
+    min-width: 20px;
+    min-height: 20px;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shopping-cart .cart-content p {
+    font-weight: 500;
+    color: #faf9fb;
+}
+
+.profile-container{
+    display: flex;
+    align-items: center;
+}
+
+.profile-container .img-box{
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 100vw;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-container .img-box .profile-picture{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.profile-container .user-name{
+    font-size: 16px;
+    margin-left: 8px;
+    font-weight: 500;
+    display: none;
+    align-items: center;
+}
+
+
+.toggle-menu{
+    transform: rotate(90deg);
+}
+
+.toggle-menu .toggle-icon{
+    color: #373848;
+    font-size: 30px;
+    
+}
