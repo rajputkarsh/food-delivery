@@ -1,0 +1,87 @@
+.row-menu-card{
+    width: 80px;
+    min-width: 80px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #faf9fb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.5s;    
+    margin-right: 12px;
+}
+
+.row-menu-card:hover, .row-menu-card.active{
+    background: #f8901c;
+}
+
+.row-menu-card .img-box{
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 100vw;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.row-menu-card:hover .img-box , .row-menu-card.active .img-box{
+    background: #faf9fb;  
+}
+
+.row-menu-card .img-box img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+.row-menu-card:hover .img-box img, .row-menu-card.active .img-box img{
+    width: 80%;
+    height: 80%;
+    transition: 0.5s;    
+}
+
+.row-menu-card h3{
+    color: #f8901c;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.row-menu-card:hover h3, .row-menu-card.active h3{
+    color: #faf9fb;
+}
+
+.row-menu-card .load-menu{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #f8901c;
+    transition: 0.5s;
+}
+
+.row-menu-card:hover .load-menu, .row-menu-card.active .load-menu{
+    background: #faf9fb;
+}
+
+.row-menu-card .load-menu .MuiSvgIcon-root{
+    color: #faf9fb;
+    font-size: 18px;
+
+}
+
+.row-menu-card:hover .MuiSvgIcon-root, .row-menu-card.active .MuiSvgIcon-root{
+    color: #f8901c;
+}

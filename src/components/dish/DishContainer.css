@@ -1,0 +1,21 @@
+.dish-container{
+    width: 100%;
+    padding: 10px 0;
+}
+
+.menu-card{
+    width: 100%;
+}
+
+.menu-row-container{
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.menu-row-container::-webkit-scrollbar{
+    display: none;
+}

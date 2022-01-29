@@ -97,25 +97,31 @@
 
 
 .bottom-menu ul li:nth-child(1).active ~ .indicator{
+    transition: 0.2s;
     transform: translateX(calc(60px * 0));
 }
 
 .bottom-menu ul li:nth-child(2).active ~ .indicator{
+    transition: 0.2s;
     transform: translateX(calc(60px * 1));
 }
 
 .bottom-menu ul li:nth-child(3).active ~ .indicator{
+    transition: 0.2s;
     transform: translateX(calc(60px * 2));
 }
 
 .bottom-menu ul li:nth-child(4).active ~ .indicator{
+    transition: 0.2s;
     transform: translateX(calc(60px * 3));
 }
 
 .bottom-menu ul li:nth-child(5).active ~ .indicator{
+    transition: 0.2s;
     transform: translateX(calc(60px * 4));
 }
 
 .bottom-menu ul li:nth-child(6).active ~ .indicator{
+    transition: 0.2s;
     transform: translateX(calc(60px * 5));
 }

@@ -7,7 +7,7 @@ function BannerName({name, discount, link}) {
       <div className="banner-content">
           <h3>Hello {name}</h3>
           <p>
-              Get ${discount} off for every order more than $100
+              Get <span>${discount}</span> off for every order more than $100
           </p>
           <a href={link}>Learn More</a>
       </div>    

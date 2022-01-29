@@ -8,12 +8,12 @@ function Footer() {
   return (
           <div className="bottom-menu">
               <ul className="menu">
-                  <MenuContainer link={'#'} icon={<HomeRounded />} class={"home-button"} />
-                  <MenuContainer link={'#'} icon={<Chat />} class={"chat-button"} />
-                  <MenuContainer link={'#'} icon={<AccountBalanceWalletRounded />} class={"wallet-button"} />
-                  <MenuContainer link={'#'} icon={<Favorite />} class={"favorite-button"} />
-                  <MenuContainer link={'#'} icon={<SummarizeRounded />} class={"summary-button"} />
-                  <MenuContainer link={'#'} icon={<Settings />} class={"settings-button"} />
+                  <MenuContainer link={'#'} icon={<HomeRounded />} isHome />
+                  <MenuContainer link={'#'} icon={<Chat />} />
+                  <MenuContainer link={'#'} icon={<AccountBalanceWalletRounded />} />
+                  <MenuContainer link={'#'} icon={<Favorite />} />
+                  <MenuContainer link={'#'} icon={<SummarizeRounded />} />
+                  <MenuContainer link={'#'} icon={<Settings />} />
               
                   <div className="indicator"></div>  
               </ul>
