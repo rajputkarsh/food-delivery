@@ -31,6 +31,7 @@
     align-items: center;
     transition: 0.5s;
     overflow: hidden;
+    background: #f8901c;
 }
 
 .row-menu-card:hover .img-box , .row-menu-card.active .img-box{

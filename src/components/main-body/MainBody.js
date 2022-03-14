@@ -1,10 +1,15 @@
 import React from 'react';
 import BannerName from '../banner/BannerName';
+import DebitCard from '../debit-card/DebitCard';
 import DishContainer from '../dish/DishContainer';
+import DishItemContainer from '../dish/DishItemContainer';
+
 
 import './MainBody.css';
 
-function MainBody() {
+function MainBody({ isMainData, setData }) {
+
+
   return (
       <main>
           <div className="main-container">
@@ -14,9 +19,17 @@ function MainBody() {
             </div>
           </div>
 
-          <DishContainer />
+          <DishContainer setData={setData} />
 
-          <div className="right-menu"></div>
+          <DishItemContainer isMainData={isMainData} />
+
+          <div className="right-menu">
+            <div className="debit-card-container">
+              <div className="debit-card">
+                <DebitCard />  
+              </div>  
+            </div>  
+          </div>
       </main>      
   )
 }
