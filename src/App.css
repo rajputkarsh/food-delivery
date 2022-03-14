@@ -8,3 +8,74 @@
 .App::-webkit-scrollbar{
   display: none;
 }
+
+@media screen and (min-width : 650px){
+  .menu-row-container{
+    justify-content: space-between !important;
+  }
+
+  .header-input-box{
+    width: 60%  !important;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .toggle-menu{
+    display: none;
+  }
+
+  .profile-container .user-name{
+    display: block;
+  }
+
+  .bottom-menu{
+    left:40%;
+    width: 26%;
+  }
+
+  .main-container{
+    width: calc(100% - 350px);
+    padding: 10px 30px;
+  }
+
+  .banner{
+    height: 160px;
+  }
+
+  .banner-image{
+    bottom: -13px;
+    width: 278px;
+  }
+
+  .banner-content h3{
+    font-size: 24px;
+  }
+
+  .banner-content p{
+    font-size: 15px;
+    margin: 12px 0;
+    width: unset;
+  }
+
+  .banner-content a{
+    font-size: 16px;
+  }
+
+  main{
+    display: flex;
+  }
+
+  .right-menu{
+    position: fixed;
+    z-index: 1;
+    transform: translateX(0%);
+    top: unset;
+    padding: 20px 15px;
+  }
+
+  .item-card{
+    width: 180px;
+    height: 200px;
+  }
+
+}

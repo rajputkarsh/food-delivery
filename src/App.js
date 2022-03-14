@@ -3,12 +3,15 @@ import React, {useState, useEffect} from 'react';
 import Header from './components/header/Header';
 import MainBody from './components/main-body/MainBody';
 import Footer from './components/footer/Footer';
+import { useStateValue } from './reducer/StateProvider';
 
 import { Items } from './components/data';
 
 import './App.css';
 
 function App() {
+
+	const [{ cart }, dispatch] = useStateValue();
 
   	const [isMainData, setMainData] = useState(
 		Items.filter(element => element.itemId === "burger01")
@@ -41,7 +44,7 @@ function App() {
 		}
 		menuCards.forEach(element => element.addEventListener('click', setMenuCardActive));
 
-  	}, [isMainData]);
+  	}, [isMainData, cart]);
   
 
 	return (

@@ -1,10 +1,38 @@
 import { AddRounded, RemoveRounded } from '@mui/icons-material';
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { actionType } from '../../reducer/reducer';
+import { useStateValue } from '../../reducer/StateProvider';
 
 import './CartItem.css';
 
-function CartItem({ name, imgSrc, qty, price }) {
-  return (
+let cartItems = [];
+
+function CartItem({ name, imgSrc, price, itemId, setTotalPrice }) {
+
+    const [{cart}, dispatch] = useStateValue();
+    const [qty, setQty]      = useState(1);
+    const [itemPrice, setItemPrice]  = useState(parseInt(qty)*parseFloat(price)); 
+
+    useEffect(() => {
+        cartItems = cart;
+        setItemPrice(parseInt(qty) * parseFloat(price));
+    }, [qty])
+
+    const updateQuantity = (action, id) => {
+        if(action === "add"){
+            setQty(qty + 1);
+        }
+        else {
+            cartItems.pop(id);
+            dispatch({
+                type: actionType.SET_CART,
+                cart: cartItems
+            });
+            setQty(qty - 1);
+        }
+    }
+
+    return (
     <div className="cart-item">
         <div className="img-box">
             <img src={imgSrc} alt="" />    
@@ -15,16 +43,16 @@ function CartItem({ name, imgSrc, qty, price }) {
             <div className="item-quantity">
                 <span>x {qty}</span>
                 <div className="quantity">
-                    <RemoveRounded className="item-remove"  />
+                    <RemoveRounded className="item-remove"onClick={() => {updateQuantity('remove', itemId)}}  />
 
-                    <AddRounded  className="item-add" />  
+                    <AddRounded  className="item-add" onClick={() => {updateQuantity('add', itemId)}}/>  
                 </div>    
             </div>    
         </div>
 
         <div className="item-price">
             <span className="dollar-sign">$</span>
-            <span className="item-price-value">{price}</span>
+            <span className="item-price-value">{itemPrice}</span>
         </div>
 
     </div>
